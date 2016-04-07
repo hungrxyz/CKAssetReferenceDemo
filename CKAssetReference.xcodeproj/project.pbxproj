@@ -12,6 +12,7 @@
 		FA0F85571CB5E68B0036B048 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0F85551CB5E68B0036B048 /* Main.storyboard */; };
 		FA0F85591CB5E68B0036B048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0F85581CB5E68B0036B048 /* Assets.xcassets */; };
 		FA0F855C1CB5E68B0036B048 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0F855A1CB5E68B0036B048 /* LaunchScreen.storyboard */; };
+		FA0F85651CB5E6990036B048 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0F85641CB5E6990036B048 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		FA0F85581CB5E68B0036B048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA0F855B1CB5E68B0036B048 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA0F855D1CB5E68B0036B048 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA0F85631CB5E6940036B048 /* CKAssetReference.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CKAssetReference.entitlements; sourceTree = "<group>"; };
+		FA0F85641CB5E6990036B048 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0F85651CB5E6990036B048 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +42,7 @@
 		FA0F85451CB5E68B0036B048 = {
 			isa = PBXGroup;
 			children = (
+				FA0F85641CB5E6990036B048 /* CloudKit.framework */,
 				FA0F85501CB5E68B0036B048 /* CKAssetReference */,
 				FA0F854F1CB5E68B0036B048 /* Products */,
 			);
@@ -54,6 +59,7 @@
 		FA0F85501CB5E68B0036B048 /* CKAssetReference */ = {
 			isa = PBXGroup;
 			children = (
+				FA0F85631CB5E6940036B048 /* CKAssetReference.entitlements */,
 				FA0F85511CB5E68B0036B048 /* AppDelegate.swift */,
 				FA0F85531CB5E68B0036B048 /* ViewController.swift */,
 				FA0F85551CB5E68B0036B048 /* Main.storyboard */,
@@ -96,6 +102,12 @@
 				TargetAttributes = {
 					FA0F854D1CB5E68B0036B048 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 96HG6E2WJ6;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -249,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CKAssetReference/CKAssetReference.entitlements;
 				INFOPLIST_FILE = CKAssetReference/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zzzel.CKAssetReference;
@@ -260,6 +273,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CKAssetReference/CKAssetReference.entitlements;
 				INFOPLIST_FILE = CKAssetReference/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zzzel.CKAssetReference;
